@@ -24,12 +24,11 @@ public class CodeMakerPattern {
 	}
 
 	/**
-	 * sets up the pattern to guess whether it be AI or human
+	 * sets up the pattern to guess whether it be AI or human, true means human
 	 * @param pattern2
 	 * @param gameInfo
 	 */
 	private void setup(ArrayList<Colours> pattern, GameInfo gameInfo) {
-		
 		if (gameInfo.isHumanCodeMaker()) {
 			for (int i = 0; i < 4; i++) {
 				int peg = i+1;
@@ -40,6 +39,14 @@ public class CodeMakerPattern {
 		} else {
 			randomSetup(pattern, gameInfo);
 		}
+	}
+
+	public ArrayList<Colours> getPattern() {
+		return pattern;
+	}
+
+	public void setPattern(ArrayList<Colours> pattern) {
+		this.pattern = pattern;
 	}
 
 	/**
